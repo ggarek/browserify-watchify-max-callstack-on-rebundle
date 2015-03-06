@@ -1,0 +1,17 @@
+{
+  "name": "browserify-watchify-max-callstack-on-rebundle",
+  "version": "1.0.0",
+  "description": "Reproduction of 'Max callstack exceed..' after rebundle on watchify update",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ovsiannikov igor <garek@mail.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.4.0"
+  }
+}
