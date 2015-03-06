@@ -1,10 +1,8 @@
 var gulp = require('gulp');
-
 var browserify = require('browserify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 var chalk = require('chalk');
-
 
 /**
  * Task: BUILD
@@ -18,13 +16,13 @@ b.on('update', function () {
 });
 
 b.add('./src/main.js');
+b.require('./src/utils/index.js', { expose: 'utils' });
 
 function bundle() {
   return b.bundle().pipe(source('bundle.js')).pipe(gulp.dest('./build/js'));
 }
 
 gulp.task('build', bundle);
-
 
 /**
  * Task: HTML 
