@@ -13,6 +13,7 @@ module.exports = function (gulp) {
   });
 
   b.add('./src/main.js');
+  b.require('./src/utils/index.js', { expose: 'utils' });
 
   function bundle() {
     return b.bundle().pipe(source('bundle.js')).pipe(gulp.dest('./build/js'));
